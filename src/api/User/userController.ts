@@ -15,8 +15,8 @@ export class UserController extends BaseController {
         return this.sendResponse({ data: users });
     }
 
-    public login = async () => {
-        const loggedInAdminUser = await this.userService.login();
+    public login = async (data) => {
+        const loggedInAdminUser = await this.userService.login(data);
         return this.sendResponse({ data: loggedInAdminUser });
     }
 }
