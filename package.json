@@ -9,8 +9,9 @@
   "scripts": {
     "post-install": "mkdir -p ./logs",
     "compile": "tsc",
-    "start": "tsc && node ./dist",
+    "start": "node ./dist",
     "watch": "nodemon",
+    "build": "tsc",
     "test": "mocha -r ./node_modules/ts-node/register src/**/*.spec.ts --runInBand",
     "typeorm": "npx ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "migrate:create": "ts-node ./node_modules/typeorm/cli.js migration:create -n",
