@@ -1,0 +1,21 @@
+"use strict";
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const dotenv = __importStar(require("dotenv"));
+const path = process.env.NODE_ENV == 'development' ? 'dev.env' : '.env';
+dotenv.config({ path });
+exports.PORT = process.env.PORT;
+exports.ENVIRONMENT = process.env.NODE_ENV;
+exports.APP_URL = process.env.APP_URL;
+exports.BASE_PATH = process.env.BASE_PATH;
+exports.DB_NAME = process.env.DB_NAME;
+exports.DB_USER = process.env.DB_USER;
+exports.DB_PASSWORD = process.env.DB_PASSWORD;
+exports.DB_HOST = process.env.DB_HOST;
+exports.JWT_SECRET = process.env.JWT_SECRET;
