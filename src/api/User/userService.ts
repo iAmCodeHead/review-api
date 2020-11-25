@@ -6,7 +6,7 @@ export class UserService {
     }
 
     public login = async (data) => {
-        return await Users.find({ where : data.username });
+        return;
     }
 
 }
